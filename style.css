@@ -22,13 +22,28 @@ em {
 
 a {
   text-decoration: none;
-  font-weight: 500;
-  color: #457b9d;
+  font-weight: 400;
 }
 
+.header {
+  max-width: fit-content;
+  margin: auto;
+}
+
+.header li {
+  display: inline-block;
+  padding-inline: 32px;
+  padding-top: 32px;
+}
+
+.header li a {
+  font-size: 20px;
+  color: #448aff;
+}
 
 .banner {
   max-width: 80%;
+  padding-top: 32px;
   margin: auto;
 }
 
@@ -59,4 +74,3 @@ a {
   width: 32px;
   padding: 16px;
 }
-
