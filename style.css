@@ -1,0 +1,50 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: white;
+  background-color: #121212;
+}
+
+strong {
+  font-weight: 500;
+}
+
+em {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #457b9d;
+}
+
+a:hover {
+  font-size: 1.3em;
+}
+
+.banner {
+  max-width: 80%;
+  margin: auto;
+}
+
+.banner-item {
+  max-width: 40%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 30px;
+}
+
+.banner-foto {
+  border-radius: 15%;
+}
+
+.banner-social{
+}

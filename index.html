@@ -9,39 +9,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        font-size: 16px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        color: #a8dadc;
-        background-color: #1d3557;
-      }
-
-      strong {
-        font-weight: 500;
-      }
-
-      em {
-        font-weight: 400;
-      }
-
-      a {
-        text-decoration: none;
-        font-weight: 500;
-        color: #457b9d;
-      }
-
-      a:hover {
-        font-size: 1.3em;
-      }
-
-      #foto {
-        border-radius: 2%;
-      }
-
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <h3>Índice:</h3>
     <ul>
@@ -49,29 +19,32 @@
       <li><a href="#skills">Minhas skills</a></li>
     </ul>
 
-    <div id="quem-sou-eu">
+    <div class="banner">
+      <div class="banner-item banner-social">
+        <p>Matheus Gabriel Silva dos Santos</p>
+        <a href="https://www.linkedin.com/in/matheusg18/" target="_blank"
+          >Linkedin</a
+        >
+        <a href="https://github.com/matheusg18" target="_blank">GitHub</a>
+      </div>
+
       <img
-        id="foto"
-        src="/resources/matheus.jpg"
+        class="banner-item banner-foto"
+        src="./resources/matheus.jpg"
         width="400px"
         alt="Matheus Santos"
       />
-      <h2>Matheus Gabriel Silva dos Santos</h2>
-      <p>
-        Sou <strong>brasileiro</strong>, moro em <em>Recife - PE</em>, e tenho
-        21 anos. Descubri a programação em 2012, tentei começar programando em
-        PHP mas não tinha muita noção do que tava fazendo, mas foi na faculdade
-        que eu acabei fascinado pela programação quando eu aprendi <em>C</em>.
-        Atualmente estou fazendo o curso da <strong>Trybe</strong> para me
-        tornar um <strong>Web Developer</strong> capacitado. até lá ainda tem
-        muita codagem pelo frente!
-      </p>
-      <a href="https://www.linkedin.com/in/matheusg18/" target="_blank"
-        >Linkedin</a
-      >
-      <br />
-      <a href="https://github.com/matheusg18" target="_blank">GitHub</a>
     </div>
+
+    <p>
+      Sou <strong>brasileiro</strong>, moro em <em>Recife - PE</em>, e tenho 21
+      anos. Descubri a programação em 2012, tentei começar programando em PHP
+      mas não tinha muita noção do que tava fazendo, mas foi na faculdade que eu
+      acabei fascinado pela programação quando eu aprendi <em>C</em>. Atualmente
+      estou fazendo o curso da <strong>Trybe</strong> para me tornar um
+      <strong>Web Developer</strong> capacitado. até lá ainda tem muita codagem
+      pelo frente!
+    </p>
 
     <div id="skills">
       <h3>Minhas Skills:</h3>
