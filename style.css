@@ -26,9 +26,6 @@ a {
   color: #457b9d;
 }
 
-a:hover {
-  font-size: 1.3em;
-}
 
 .banner {
   max-width: 80%;
@@ -39,12 +36,27 @@ a:hover {
   max-width: 40%;
   display: inline-block;
   vertical-align: middle;
-  padding: 30px;
+  padding: 32px;
 }
 
 .banner-foto {
   border-radius: 15%;
 }
 
-.banner-social{
+.banner-social h2 {
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+  padding: 16px;
 }
+
+.social-network {
+  max-width: 50%;
+  margin: auto;
+}
+
+.social-network-icon {
+  width: 32px;
+  padding: 16px;
+}
+
