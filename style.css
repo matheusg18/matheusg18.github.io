@@ -18,6 +18,7 @@ strong {
 
 em {
   font-weight: 400;
+  font-style: normal;
 }
 
 a {
@@ -73,4 +74,12 @@ a {
 .social-network-icon {
   width: 32px;
   padding: 16px;
+}
+
+#quem-sou-eu {
+  max-width: 70%;
+  margin: auto;
+  padding-top: 50px;
+  text-align: justify;
+  text-justify: inter-word;
 }
