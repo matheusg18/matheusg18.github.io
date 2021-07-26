@@ -83,3 +83,24 @@ a {
   text-align: justify;
   text-justify: inter-word;
 }
+
+#minhas-skills {
+  padding-top: 50px;
+  margin-left: 15%;
+  
+}
+
+#minhas-skills h3 {
+  font-weight: 500;
+  padding-bottom: 16px;
+  font-size: 18px;
+}
+
+#minhas-skills ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+#minhas-skills li {
+  padding-top: 2px;
+}
