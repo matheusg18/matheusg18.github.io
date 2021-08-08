@@ -1,0 +1,38 @@
+.palette,
+.canvas,
+.controls {
+  width: fit-content;
+  margin: 20px auto;
+}
+
+.palette-color {
+  transition: transform 100ms;
+  cursor: pointer;
+}
+
+.palette-color:hover {
+  border: none;
+  transform: scale(1.25);
+}
+
+.canvas-cell {
+  cursor: cell;
+}
+
+.grid {
+  display: table;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.grid-row {
+  display: table-row;
+}
+
+.grid-cell {
+  display: table-cell;
+  width: 30px;
+  height: 30px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
