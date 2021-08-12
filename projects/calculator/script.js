@@ -4,6 +4,10 @@ function instanciateElements() {
   CALCULATOR_SCREEN = document.getElementById("calculator-screen");
 }
 
+function clearScreenText() {
+  CALCULATOR_SCREEN.innerText = "";
+}
+
 function updateScreenText(content) {
   CALCULATOR_SCREEN.innerText += content;
 }
@@ -20,8 +24,13 @@ function addEventListenersToNumbers() {
   }
 }
 
+function handleAc() {
+  clearScreenText();
+}
+
 function addEventListeners() {
   addEventListenersToNumbers();
+  document.getElementById("ac").addEventListener("click", handleAc);
 }
 
 window.onload = function () {
