@@ -11,10 +11,16 @@ describe('Testes no Sobre', () => {
     expect(sobreHeading).toBeInTheDocument();
   });
 
-  it('Deve conter um parágrafo', () => {
-    const paragraph = screen.getByRole('paragraph');
+  it('Deve conter 3 parágrafos', () => {
+    const paragraphs = [
+      screen.getByText(/Meu nome é Matheus Santos/),
+      screen.getByText(/Entrei para a Trybe/),
+      screen.getByText(/No tempo livre/),
+    ];
 
-    expect(paragraph).toBeInTheDocument();
+    paragraphs.forEach((paragraph) => {
+      expect(paragraph).toBeInTheDocument();
+    });
   });
 
   it('Deve ter uma imagem de ilustração', () => {
