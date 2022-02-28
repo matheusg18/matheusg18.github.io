@@ -6,13 +6,13 @@ describe('Testes no Hero', () => {
   beforeEach(() => render(<Hero />));
 
   it('Deve conter a minha foto', () => {
-    const picture = screen.findByRole('img', { name: 'Matheus Santos' });
+    const picture = screen.getByRole('img', { name: 'Matheus Santos' });
 
     expect(picture).toBeInTheDocument();
   });
 
   it('Deve conter o texto de apresentação', () => {
-    const text = screen.findByRole('heading', { level: 1 });
+    const text = screen.getByRole('heading', { level: 1 });
 
     expect(text).toBeInTheDocument();
     expect(text.innerHTML).toMatch(/matheus/i);
