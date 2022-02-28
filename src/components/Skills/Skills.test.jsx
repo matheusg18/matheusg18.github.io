@@ -19,22 +19,21 @@ const skills = [
   'sass',
 ];
 
-const toDataTestId = (skill) => `icon-${skill.split(' ').join('-')}`;
-
 describe('Testes em Skills', () => {
   beforeEach(() => render(<Skills />));
 
   it('Deve conter um h2', () => {
-    const heading = screen.getAllByRole('heading', { level: 2 });
+    const heading = screen.getByRole('heading', { level: 2 });
 
     expect(heading).toBeInTheDocument();
   });
 
   // Cria o teste dos ícones
   skills.forEach((skill) => {
-    it(`Deve conter o ícone de ${skill}`, () => {
-      const icon = screen.getByTestId(toDataTestId(skill));
-      const iconName = screen.getByText(new RegExp(skill, 'i'));
+    it(`Deve conter o ícone de ${skill} e seu nome`, () => {
+      const iconNameRegex = new RegExp(`^${skill}$`, 'i');
+      const icon = screen.getByRole('img', { name: iconNameRegex });
+      const iconName = screen.getByText(iconNameRegex);
 
       expect(icon).toBeInTheDocument();
       expect(iconName).toBeInTheDocument();
