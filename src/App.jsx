@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Sobre from './components/Sobre';
 import Skills from './components/Skills';
 import theme from './theme.styles';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <Sobre />
         <Skills />
+        <Projects />
       </main>
     </ThemeProvider>
   );
