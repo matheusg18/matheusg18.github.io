@@ -9,7 +9,7 @@ import {
 
 function Sobre() {
   return (
-    <SobreWrapper>
+    <SobreWrapper id="sobre">
       <h2>Sobre mim</h2>
       <SobreTextImgContainer>
         <SobreImg src="images/ilustração.png" alt="ilustração" />

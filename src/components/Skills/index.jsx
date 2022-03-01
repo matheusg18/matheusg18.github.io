@@ -21,7 +21,7 @@ function Skills() {
   ];
 
   return (
-    <SkillsWrapper>
+    <SkillsWrapper id="skills">
       <h2>Skills</h2>
       <SkillsOverflowContainer>
         <SkillIconsWrapper>

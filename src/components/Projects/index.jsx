@@ -42,7 +42,7 @@ function Projects() {
   };
 
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper id="projetos">
       <h2>Projetos</h2>
       <PrevProjectButton type="button" aria-label="projeto anterior" onClick={goPrevProject}>
         <IoIosArrowBack />
