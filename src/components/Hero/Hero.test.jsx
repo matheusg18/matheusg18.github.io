@@ -1,9 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
 import Hero from '.';
+import theme from '../../theme.styles';
 
 describe('Testes no Hero', () => {
-  beforeEach(() => render(<Hero />));
+  beforeEach(() => render(
+    <ThemeProvider theme={theme}>
+      <Hero />
+    </ThemeProvider>,
+  ));
 
   it('Deve conter a minha foto', () => {
     const picture = screen.getByRole('img', { name: 'Matheus Santos' });

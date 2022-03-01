@@ -1,9 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
 import Header from '.';
+import theme from '../../theme.styles';
 
 describe('Testes no Header', () => {
-  beforeEach(() => render(<Header />));
+  beforeEach(() => render(
+    <ThemeProvider theme={theme}>
+      <Header />
+    </ThemeProvider>,
+  ));
 
   it('Deve haver um link com meu nome', () => {
     const nameLink = screen.getByRole('link', { name: 'Matheus' });

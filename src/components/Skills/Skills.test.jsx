@@ -1,6 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
 import Skills from '.';
+import theme from '../../theme.styles';
 
 const skills = [
   'react',
@@ -20,7 +22,11 @@ const skills = [
 ];
 
 describe('Testes em Skills', () => {
-  beforeEach(() => render(<Skills />));
+  beforeEach(() => render(
+    <ThemeProvider theme={theme}>
+      <Skills />
+    </ThemeProvider>,
+  ));
 
   it('Deve conter um h2', () => {
     const heading = screen.getByRole('heading', { level: 2 });

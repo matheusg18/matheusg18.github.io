@@ -1,9 +1,15 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
 import Sobre from '.';
+import theme from '../../theme.styles';
 
 describe('Testes no Sobre', () => {
-  beforeEach(() => render(<Sobre />));
+  beforeEach(() => render(
+    <ThemeProvider theme={theme}>
+      <Sobre />
+    </ThemeProvider>,
+  ));
 
   it('Deve possuir um h2', () => {
     const sobreHeading = screen.getByRole('heading', { level: 2 });
