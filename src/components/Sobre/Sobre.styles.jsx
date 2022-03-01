@@ -24,6 +24,7 @@ export const SobreImg = styled.img`
 export const SobreParagraph = styled.p`
   margin-bottom: ${({ theme }) => theme.space(2)};
   text-align: center;
+  opacity: 0.85;
 `;
 
 export const SobreLink = styled.a`

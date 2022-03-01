@@ -11,6 +11,10 @@ const SkillIconContainer = styled.div`
     height: 60px;
     width: auto;
   }
+
+  & span {
+    opacity: 0.85;
+  }
 `;
 
 export default SkillIconContainer;

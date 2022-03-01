@@ -1,5 +1,16 @@
 import React, { useState } from 'react';
-import { GrNext, GrPrevious } from 'react-icons/gr';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import {
+  NextProjectButton,
+  PrevProjectButton,
+  ProjectImage,
+  ProjectImageContainer,
+  ProjectInfoContainer,
+  ProjectsLinks,
+  ProjectStackContainer,
+  ProjectsWrapper,
+  StacksContainer,
+} from './Projects.styles';
 
 function Projects() {
   const [projectIndex, setProjectIndex] = useState(0);
@@ -31,34 +42,36 @@ function Projects() {
   };
 
   return (
-    <section>
+    <ProjectsWrapper>
       <h2>Projetos</h2>
-      <button
-        type="button"
-        aria-label="projeto anterior"
-        onClick={goPrevProject}
-      >
-        <GrPrevious />
-      </button>
-      <button
-        type="button"
-        aria-label="próximo projeto"
-        onClick={goNextProject}
-      >
-        <GrNext />
-      </button>
+      <PrevProjectButton type="button" aria-label="projeto anterior" onClick={goPrevProject}>
+        <IoIosArrowBack />
+      </PrevProjectButton>
+      <NextProjectButton type="button" aria-label="próximo projeto" onClick={goNextProject}>
+        <IoIosArrowForward />
+      </NextProjectButton>
       <div>
-        <h3>{projects[projectIndex].name}</h3>
-        <p>{projects[projectIndex].description}</p>
-        <img src={projects[projectIndex].img} alt={projects[projectIndex].name} />
-        <h4>Tecnologias usadas</h4>
-        {projects[projectIndex].stack.map((st) => (
-          <div key={`${projects[projectIndex].name}${st}`}>{st}</div>
-        ))}
+        <ProjectInfoContainer>
+          <h3>{projects[projectIndex].name}</h3>
+          <p>{projects[projectIndex].description}</p>
+        </ProjectInfoContainer>
+        <ProjectImageContainer>
+          <ProjectImage src={projects[projectIndex].img} alt={projects[projectIndex].name} />
+        </ProjectImageContainer>
+        <ProjectStackContainer>
+          <h4>Tecnologias usadas</h4>
+          <StacksContainer>
+            {projects[projectIndex].stack.map((st) => (
+              <div key={`${projects[projectIndex].name}${st}`}>{st}</div>
+            ))}
+          </StacksContainer>
+        </ProjectStackContainer>
       </div>
-      <a href={projects[projectIndex].demo}>Demonstração</a>
-      <a href={projects[projectIndex].repo}>Repositório</a>
-    </section>
+      <ProjectsLinks>
+        <a href={projects[projectIndex].demo}>Demonstração</a>
+        <a href={projects[projectIndex].repo}>Repositório</a>
+      </ProjectsLinks>
+    </ProjectsWrapper>
   );
 }
 
