@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillIcon from '../SkillIcon';
+import { SkillIconsWrapper, SkillsOverflowContainer, SkillsWrapper } from './Skills.styles';
 
 function Skills() {
   const skillsList = [
@@ -20,14 +21,16 @@ function Skills() {
   ];
 
   return (
-    <section>
+    <SkillsWrapper>
       <h2>Skills</h2>
-      <div>
-        {skillsList.map((skill) => (
-          <SkillIcon key={skill} skillName={skill} />
-        ))}
-      </div>
-    </section>
+      <SkillsOverflowContainer>
+        <SkillIconsWrapper>
+          {skillsList.map((skill) => (
+            <SkillIcon key={skill} skillName={skill} />
+          ))}
+        </SkillIconsWrapper>
+      </SkillsOverflowContainer>
+    </SkillsWrapper>
   );
 }
 
