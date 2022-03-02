@@ -94,6 +94,11 @@ export const ProjectsLinks = styled.div`
   align-items: center;
   justify-content: space-between;
 
+  @media screen and (min-width: 500px) {
+    justify-content: flex-start;
+    gap: ${({ theme }) => theme.space(2)};
+  }
+
   & > a {
     display: block;
     width: fit-content;

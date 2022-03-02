@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const HeroImg = styled.img`
-  max-width: 70%;
+  max-width: 320px;
+  width: 70%;
   height: auto;
   border-radius: 50%;
   margin-bottom: ${({ theme }) => theme.space(5)};
@@ -11,11 +12,10 @@ export const MyName = styled.span`
   color: ${({ theme }) => theme.color.secondary};
 `;
 
-export const HeroTextIconContainer = styled.div`
-
-`;
+export const HeroTextIconContainer = styled.div``;
 
 export const HeroWrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

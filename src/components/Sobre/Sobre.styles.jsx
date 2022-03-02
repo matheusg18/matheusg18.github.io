@@ -25,12 +25,16 @@ export const SobreParagraph = styled.p`
   margin-bottom: ${({ theme }) => theme.space(2)};
   text-align: center;
   opacity: 0.85;
+
+  @media screen and (min-width: 1024px) {
+    text-align: start;
+  }
 `;
 
 export const SobreLink = styled.a`
   display: block;
   width: fit-content;
-  margin: ${({ theme }) => theme.space(1)} auto 0 auto;
+  margin: ${({ theme }) => theme.space(1)} auto ${({ theme }) => theme.space(2)} auto;
   border-radius: 30px;
   padding: ${({ theme }) => theme.space(2)} ${({ theme }) => theme.space(4)};
   background-color: ${({ theme }) => theme.color.secondary};
