@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SkillsWrapper = styled.section`
   width: 90%;
+  max-width: 1250px;
   position: relative;
   margin: ${({ theme }) => theme.space(5)} auto;
   background-color: ${({ theme }) => theme.color.card};
@@ -11,6 +12,7 @@ export const SkillsWrapper = styled.section`
 
   @media screen and (min-width: 1366px) {
     padding: ${({ theme }) => theme.space(5)};
+    margin: ${({ theme }) => theme.space(10)} auto;
   }
 
   & h2 {

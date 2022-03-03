@@ -26,6 +26,7 @@ export const HeroCentralizer = styled.section`
 
 export const HeroWrapper = styled.div`
   width: 100%;
+  max-width: 1250px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ProjectsWrapper = styled.section`
   width: 90%;
+  max-width: 1250px;
   margin: 0 auto ${({ theme }) => theme.space(5)} auto;
   position: relative;
   background-color: ${({ theme }) => theme.color.card};
@@ -11,6 +12,7 @@ export const ProjectsWrapper = styled.section`
 
   @media screen and (min-width: 1366px) {
     padding: ${({ theme }) => theme.space(5)};
+    margin-bottom: ${({ theme }) => theme.space(10)};
   }
 
   & h2 {

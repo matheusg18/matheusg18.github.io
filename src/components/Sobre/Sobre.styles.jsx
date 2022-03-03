@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SobreWrapper = styled.section`
   width: 90%;
+  max-width: 1250px;
   margin: 0 auto;
   background-color: ${({ theme }) => theme.color.card};
   border-radius: 10px;
