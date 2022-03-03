@@ -6,6 +6,7 @@ import {
   ProjectContainer,
   ProjectImage,
   ProjectImageContainer,
+  ProjectImagePlaceholder,
   ProjectInfoContainer,
   ProjectsLinks,
   ProjectStackContainer,
@@ -25,6 +26,24 @@ function Projects() {
       stack: ['React', 'React Hooks', 'ContextAPI', 'Bootstrap', 'Kanban'],
       repo: 'https://github.com/matheusg18/farm-app-de-receitas',
       demo: 'https://farm-app-de-receitas.vercel.app/',
+    },
+    {
+      name: 'Time Tracking Dashboard',
+      description:
+        'Esta é a minha solução do desafio "Time tracking dashboard" do FrontEnd Mentor. O desafio consiste em criar um dashboard de organização do tempo seguindo o design, onde o usuário pode escolher o período de consulta.',
+      img: 'projects/time-tracking-dashboard.png',
+      stack: ['React', 'JavaScript', 'HTML', 'CSS', 'SASS', 'Mobile-first'],
+      repo: 'https://github.com/matheusg18/time-tracking-dashboard',
+      demo: 'https://matheusg18.github.io/time-tracking-dashboard/',
+    },
+    {
+      name: 'Store Manager',
+      description:
+        'Store Manager é uma API de um sistema de gerenciamento de vendas, onde é possível criar, visualizar, deletar e atualizar produtos e vendas. Feito em TDD usando a arquitetura MSC.',
+      img: null,
+      stack: ['NodeJS', 'Mocha', 'Chai', 'Sinon', 'MySQL', 'TDD', 'Arquitetura MSC', 'Express'],
+      repo: 'https://github.com/matheusg18/store-manager',
+      demo: null,
     },
   ];
 
@@ -56,9 +75,13 @@ function Projects() {
           <h3>{projects[projectIndex].name}</h3>
           <p>{projects[projectIndex].description}</p>
         </ProjectInfoContainer>
-        <ProjectImageContainer>
-          <ProjectImage src={projects[projectIndex].img} alt={projects[projectIndex].name} />
-        </ProjectImageContainer>
+        {projects[projectIndex].img ? (
+          <ProjectImageContainer>
+            <ProjectImage src={projects[projectIndex].img} alt={projects[projectIndex].name} />
+          </ProjectImageContainer>
+        ) : (
+          <ProjectImagePlaceholder />
+        )}
         <ProjectStackContainer>
           <h4>Tecnologias usadas</h4>
           <StacksContainer>
@@ -69,7 +92,7 @@ function Projects() {
         </ProjectStackContainer>
       </ProjectContainer>
       <ProjectsLinks>
-        <a href={projects[projectIndex].demo}>Demonstração</a>
+        {projects[projectIndex].demo && <a href={projects[projectIndex].demo}>Demonstração</a>}
         <a href={projects[projectIndex].repo}>Repositório</a>
       </ProjectsLinks>
     </ProjectsWrapper>

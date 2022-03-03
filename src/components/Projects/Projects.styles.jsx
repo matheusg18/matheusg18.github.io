@@ -35,12 +35,9 @@ const ProjectsButton = styled.button`
   cursor: pointer;
   transition: all 100ms;
 
-  &:hover {
-    font-size: 40px;
-  }
-
   @media screen and (min-width: 1366px) {
     font-size: 42px;
+    top: 300px;
 
     &:hover {
       font-size: 50px;
@@ -51,24 +48,24 @@ const ProjectsButton = styled.button`
 export const PrevProjectButton = styled(ProjectsButton)`
   left: 10px;
 
-  &:hover {
-    left: 12px;
-  }
-
   @media screen and (min-width: 1366px) {
     left: 16px;
+
+    &:hover {
+      left: 12px;
+    }
   }
 `;
 
 export const NextProjectButton = styled(ProjectsButton)`
   right: 10px;
 
-  &:hover {
-    right: 12px;
-  }
-
   @media screen and (min-width: 1366px) {
     right: 16px;
+
+    &:hover {
+      right: 12px;
+    }
   }
 `;
 
@@ -136,12 +133,18 @@ export const ProjectImageContainer = styled.div`
 
   @media screen and (min-width: 1366px) {
     grid-area: image;
+    margin: 0;
   }
 `;
 
+export const ProjectImagePlaceholder = styled.div`
+  min-height: 100px;
+`;
+
 export const ProjectImage = styled.img`
-  max-width: 200px;
-  height: auto;
+  width: auto;
+  max-width: 375px;
+  max-height: 370px;
 `;
 
 export const StacksContainer = styled.div`
