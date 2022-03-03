@@ -39,7 +39,7 @@ function Projects() {
     {
       name: 'Store Manager',
       description:
-        'Store Manager é uma API de um sistema de gerenciamento de vendas, onde é possível criar, visualizar, deletar e atualizar produtos e vendas. Feito em TDD usando a arquitetura MSC.',
+        'Store Manager é uma REST API de um sistema de gerenciamento de vendas, onde é possível criar, visualizar, deletar e atualizar produtos e vendas. Feito em TDD usando a arquitetura MSC.',
       img: null,
       stack: ['NodeJS', 'Mocha', 'Chai', 'Sinon', 'MySQL', 'TDD', 'Arquitetura MSC', 'Express'],
       repo: 'https://github.com/matheusg18/store-manager',

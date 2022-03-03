@@ -32,7 +32,7 @@ function Sobre() {
         </div>
       </SobreTextImgContainer>
       <SobreLink
-        href="https://drive.google.com/file/d/1jh03xwlASqpnNnw1fBmsOVJwVxgFhYoj/view?usp=sharing"
+        href="https://drive.google.com/file/d/1s-NlLri7DFWjOsfwQmyILdF-G3leEOvd/view?usp=sharing"
         target="_blank"
         rel="noreferrer"
       >
