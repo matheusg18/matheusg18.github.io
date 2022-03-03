@@ -14,20 +14,31 @@ export const MyName = styled.span`
 
 export const HeroTextIconContainer = styled.div``;
 
-export const HeroWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 export const HeroCentralizer = styled.section`
+  max-width: 100%;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
+
+export const HeroWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+
+  @media screen and (min-width: 1366px) {
+      justify-content: space-evenly;
+    }
+
+  & h1 {
+    @media screen and (min-width: 1366px) {
+      font-size: 40px;
+    }
+  }
 `;
 
 export const IconContainer = styled.div`
@@ -42,5 +53,9 @@ export const IconContainer = styled.div`
     color: ${({ theme }) => theme.color.secondary};
     text-decoration: none;
     font-size: 32px;
+
+    @media screen and (min-width: 1366px) {
+      font-size: 40px;
+    }
   }
 `;

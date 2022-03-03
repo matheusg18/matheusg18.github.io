@@ -8,6 +8,16 @@ export const SkillsWrapper = styled.section`
   border-radius: 10px;
   padding: ${({ theme }) => theme.space(2.5)};
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+
+  @media screen and (min-width: 1366px) {
+    padding: ${({ theme }) => theme.space(5)};
+  }
+
+  & h2 {
+    @media screen and (min-width: 1366px) {
+      font-size: 30px;
+    }
+  }
 `;
 
 export const SkillsOverflowContainer = styled.div`
@@ -16,6 +26,11 @@ export const SkillsOverflowContainer = styled.div`
   width: 100%;
   overflow-x: auto;
   scroll-behavior: smooth;
+
+  @media screen and (min-width: 1024px) {
+    margin-top: ${({ theme }) => theme.space(6)};
+    margin-bottom: 0;
+  }
 `;
 
 export const SkillIconsWrapper = styled.div`
@@ -32,7 +47,7 @@ export const SkillIconsWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    align-items: center;
+    align-items: baseline;
     height: 260px;
   }
 

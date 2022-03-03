@@ -7,6 +7,10 @@ const SkillIconContainer = styled.div`
   width: 110px;
   text-align: center;
 
+  @media screen and (min-width: 1366px) {
+    font-size: 18px;
+  }
+
   & img {
     height: 60px;
     width: auto;

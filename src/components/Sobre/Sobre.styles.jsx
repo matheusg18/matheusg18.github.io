@@ -7,18 +7,39 @@ export const SobreWrapper = styled.section`
   border-radius: 10px;
   padding: ${({ theme }) => theme.space(2.5)};
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+
+  @media screen and (min-width: 1366px) {
+    padding: ${({ theme }) => theme.space(5)};
+  }
+
+  & h2 {
+    @media screen and (min-width: 1366px) {
+      font-size: 30px;
+    }
+  }
 `;
 
 export const SobreTextImgContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 1366px) {
+    margin: ${({ theme }) => theme.space(3)} 0;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10%;
+  }
 `;
 
 export const SobreImg = styled.img`
   max-width: 240px;
   height: auto;
   margin: ${({ theme }) => theme.space(4)} 0;
+
+  @media screen and (min-width: 1366px) {
+    max-width: 300px;
+  }
 `;
 
 export const SobreParagraph = styled.p`
@@ -28,6 +49,7 @@ export const SobreParagraph = styled.p`
 
   @media screen and (min-width: 1024px) {
     text-align: start;
+    font-size: 20px;
   }
 `;
 
@@ -42,4 +64,19 @@ export const SobreLink = styled.a`
   font-size: 20px;
   font-weight: 700;
   color: ${({ theme }) => theme.color.font};
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 200ms;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.hover};
+  }
+
+  &:active {
+    background-color: ${({ theme }) => theme.color.active};
+  }
+
+  @media screen and (min-width: 1366px) {
+    margin: 0;
+  }
 `;

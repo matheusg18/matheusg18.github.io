@@ -3,6 +3,7 @@ import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import {
   NextProjectButton,
   PrevProjectButton,
+  ProjectContainer,
   ProjectImage,
   ProjectImageContainer,
   ProjectInfoContainer,
@@ -50,7 +51,7 @@ function Projects() {
       <NextProjectButton type="button" aria-label="próximo projeto" onClick={goNextProject}>
         <IoIosArrowForward />
       </NextProjectButton>
-      <div>
+      <ProjectContainer>
         <ProjectInfoContainer>
           <h3>{projects[projectIndex].name}</h3>
           <p>{projects[projectIndex].description}</p>
@@ -66,7 +67,7 @@ function Projects() {
             ))}
           </StacksContainer>
         </ProjectStackContainer>
-      </div>
+      </ProjectContainer>
       <ProjectsLinks>
         <a href={projects[projectIndex].demo}>Demonstração</a>
         <a href={projects[projectIndex].repo}>Repositório</a>
