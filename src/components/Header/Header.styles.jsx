@@ -25,7 +25,8 @@ export const MyName = styled.a`
 `;
 
 export const MobileMenuContainer = styled.div`
-  padding: ${({ theme }) => theme.space(2)} ${({ theme }) => theme.space(4)} ${({ theme }) => theme.space(1.25)} ${({ theme }) => theme.space(4)};
+  padding: ${({ theme }) => theme.space(2)} ${({ theme }) => theme.space(4)}
+    ${({ theme }) => theme.space(1.25)} ${({ theme }) => theme.space(4)};
   font-size: 26px;
 `;
 
@@ -38,6 +39,14 @@ export const HeaderNav = styled.nav`
   background-color: inherit;
   transition: transform 200ms ease-out;
 
+  @media screen and (min-width: 1025px) {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    width: fit-content;
+    margin-right: ${({ theme }) => theme.space(4)};
+  }
+
   & > ul {
     list-style: none;
     display: flex;
@@ -47,6 +56,12 @@ export const HeaderNav = styled.nav`
     padding: ${({ theme }) => theme.space(2)} 0 ${({ theme }) => theme.space(4)} 0;
     font-size: 18px;
     font-weight: 700;
+
+    @media screen and (min-width: 1025px) {
+      display: flex;
+      flex-flow: row nowrap;
+      padding: 0;
+    }
   }
 `;
 

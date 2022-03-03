@@ -12,7 +12,7 @@ function Header() {
   const [showMobileNav, setShowMobileNav] = useState(false);
 
   const showButton = () => {
-    if (window.innerWidth <= 700) {
+    if (window.innerWidth <= 1024) {
       setShowMobileButton(true);
     } else {
       setShowMobileButton(false);
