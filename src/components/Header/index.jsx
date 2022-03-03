@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import {
+  HeaderCentralizer,
   HeaderNav,
   HeaderWrapper,
   MobileMenuContainer,
@@ -27,25 +28,27 @@ function Header() {
 
   return (
     <HeaderWrapper>
-      <MyName href="#top">Matheus</MyName>
-      {showMobileButton && (
-        <MobileMenuContainer onClick={() => setShowMobileNav((prev) => !prev)}>
-          <GiHamburgerMenu data-testid="mobile-menu" />
-        </MobileMenuContainer>
-      )}
-      <HeaderNav show={showMobileNav && showMobileButton}>
-        <ul>
-          <li>
-            <a href="#sobre">Sobre</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#projetos">Projetos</a>
-          </li>
-        </ul>
-      </HeaderNav>
+      <HeaderCentralizer>
+        <MyName href="#top">Matheus</MyName>
+        {showMobileButton && (
+          <MobileMenuContainer onClick={() => setShowMobileNav((prev) => !prev)}>
+            <GiHamburgerMenu data-testid="mobile-menu" />
+          </MobileMenuContainer>
+        )}
+        <HeaderNav show={showMobileNav && showMobileButton}>
+          <ul>
+            <li>
+              <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#projetos">Projetos</a>
+            </li>
+          </ul>
+        </HeaderNav>
+      </HeaderCentralizer>
     </HeaderWrapper>
   );
 }

@@ -7,14 +7,19 @@ export const HeaderWrapper = styled.header`
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 
   & a {
     color: ${({ theme }) => theme.color.font};
     text-decoration: none;
   }
+`;
+
+export const HeaderCentralizer = styled.div`
+  max-width: 1366px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const MyName = styled.a`
@@ -36,13 +41,14 @@ export const HeaderNav = styled.nav`
   width: 100%;
   top: 62px;
   transform: ${({ show }) => (show ? 'translateY(0)' : 'translateY(-150%)')};
-  background-color: inherit;
+  background-color: rgba(0, 0, 0, 0.95);
   transition: transform 200ms ease-out;
 
   @media screen and (min-width: 1025px) {
     position: relative;
     transform: translate(0);
     top: 0;
+    z-index: inherit;
     width: fit-content;
     margin-right: ${({ theme }) => theme.space(4)};
   }
