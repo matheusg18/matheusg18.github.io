@@ -50,6 +50,9 @@ export const SobreParagraph = styled.p`
 
   @media screen and (min-width: 1024px) {
     text-align: start;
+  }
+
+  @media screen and (min-width: 1366px) {
     font-size: 20px;
   }
 `;

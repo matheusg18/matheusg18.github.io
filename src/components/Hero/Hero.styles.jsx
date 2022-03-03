@@ -28,12 +28,13 @@ export const HeroWrapper = styled.div`
   width: 100%;
   max-width: 1250px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
 
   @media screen and (min-width: 1366px) {
-      justify-content: space-evenly;
-    }
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
 
   & h1 {
     @media screen and (min-width: 1366px) {
