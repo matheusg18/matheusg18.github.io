@@ -4,17 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import userEvent from '@testing-library/user-event';
 import Projects from '.';
 import theme from '../../theme.styles';
-
-const projects = [
-  {
-    name: 'FARM App de receitas',
-    description:
-      'O FARM App de Receitas é um site feito com React onde é possível ver, buscar, filtrar, favoritar e acompanhar o processo de preparação de comidas e drinks. Design exclusivamente mobile.',
-    stack: ['React', 'React Hooks', 'ContextAPI', 'Bootstrap', 'Kanban'],
-    repo: 'https://github.com/matheusg18/farm-app-de-receitas',
-    demo: 'https://farm-app-de-receitas.vercel.app/',
-  },
-];
+import projects from '../../data/projects.json';
 
 describe('Testes no Projects', () => {
   beforeEach(() => render(
@@ -41,24 +31,28 @@ describe('Testes no Projects', () => {
     const nextButton = screen.getByRole('button', { name: 'próximo projeto' });
 
     projects.forEach(({
-      name, description, stack, repo, demo,
+      name, description, stack, repo, demo, img,
     }) => {
       const projectHeading = screen.getByRole('heading', { level: 3, name });
       const projectDescription = screen.getByText(description);
-      const projectImage = screen.getByRole('img');
       const stackHeading = screen.getByRole('heading', { level: 4, name: 'Tecnologias usadas' });
       const pops = stack.map((st) => screen.getByText(st));
       const repoLink = screen.getByRole('link', { name: 'Repositório' });
 
       expect(projectHeading).toBeInTheDocument();
       expect(projectDescription).toBeInTheDocument();
-      expect(projectImage).toBeInTheDocument();
       expect(stackHeading).toBeInTheDocument();
       pops.forEach((pop) => {
         expect(pop).toBeInTheDocument();
       });
       expect(repoLink).toBeInTheDocument();
       expect(repoLink.href).toMatch(repo);
+
+      if (img) {
+        const projectImage = screen.getByRole('img');
+
+        expect(projectImage).toBeInTheDocument();
+      }
 
       if (demo) {
         const demoLink = screen.getByRole('link', { name: 'Demonstração' });
