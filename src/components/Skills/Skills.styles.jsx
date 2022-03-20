@@ -37,20 +37,14 @@ export const SkillsOverflowContainer = styled.div`
 
 export const SkillIconsWrapper = styled.div`
   width: 800px;
-  height: 210px;
-  display: flex;
-  flex-flow: row wrap;
+  height: 350px;
+  display: grid;
   align-items: baseline;
-  align-content: space-between;
-  justify-content: space-between;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 
   @media screen and (min-width: 1024px) {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: baseline;
-    height: 260px;
   }
 
   & > div {
