@@ -1,0 +1,203 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import { getPermalink } from '~/utils/permalinks';
+import MeImage from '~/assets/images/me.jpg';
+
+const metadata = {
+  title: 'Personal Homepage Demo',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero
+    id="hero"
+    title="Matheus Santos"
+    tagline="Full Stack Web Developer"
+    actions={[{ variant: 'primary', text: "Let's talk", href: getPermalink('/contact#form') }]}
+  >
+    <Fragment slot="subtitle">
+      I'm a Full-Stack Engineer fueled by innovation. I build AI-powered solutions, scalable microservices, and
+      cloud-native apps with Vue.js, Next.js, Node.js, and Python—always pushing the boundaries of what tech can
+      achieve.
+    </Fragment>
+  </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'Linkedin',
+          href: 'https://linkedin.com/in/matheusg18',
+        },
+      },
+      {
+        icon: 'tabler:brand-github',
+        callToAction: {
+          target: '_blank',
+          text: 'Github',
+          href: 'https:/github.com/matheusg18',
+        },
+      },
+    ]}
+    image={{
+      src: MeImage,
+      alt: 'Colorful Image',
+      loading: 'eager',
+    }}
+  >
+    <Fragment slot="content">
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <p>
+        I'm a Full-Stack Engineer who discovered my passion for coding while learning C language in university. That
+        initial curiosity grew into a career where I now build AI-powered solutions, scalable microservices, and
+        cloud-native applications using modern technologies like Vue.js, Next.js, Node.js, and Python.
+      </p>
+      <br />
+      <p>
+        Outside of work, I'm an avid gamer and anime enthusiast who believes great storytelling - whether in code or
+        entertainment - can create meaningful experiences. My approach to technology mirrors how I approach life: always
+        learning, always creating. From professional projects at UOL Ads to personal experiments like game development,
+        I love turning ideas into reality.
+      </p>
+      <br />
+      <p>
+        What motivates me most is the creative process of building solutions that make an impact. While I take my work
+        seriously, I never lose the sense of wonder that first drew me to programming. It's this balance between
+        professional dedication and personal passion that drives me forward - both in writing clean code and in enjoying
+        life's adventures with my family.
+      </p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Work experience"
+    items={[
+      {
+        title:
+          'Software Engineer <br /> <span class="font-normal">UOL ads, Remote</span> <br /> <span class="text-sm font-normal">2022 - Present</span>',
+        description: `At UOL, I work as a fullstack software engineer on the UOL Ads product. As part of a talented development team, I use agile methodologies such as Scrum to develop the frontend primarily using Vue.js, JavaScript, and SASS, and the backend using microservices with the Spring Framework and Node.js.
+Additionally, I focus on innovation using Artificial Intelligence to enhance and evolve product solutions.
+My goal is to contribute to the continuous evolution of UOL Ads in a scalable and self-testing manner, always applying best development practices to ensure that the product remains a reliable and high-quality solution.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Trainee <br /> <span class="font-normal">Asa Branca Aerospace, Brazil, Recife - PE</span> <br /> <span class="text-sm font-normal">2020 - 2021</span>',
+        description: `In the Asa Branca extension project at UFPE, I worked as a programmer on the control team. My main responsibility was to develop the tracking feature for the CubeSat using the C++ programming language. Additionally, I was also responsible for reporting progress on a weekly basis in meetings with the team.
+
+During my time on the project, I learned to work effectively in a team and honed my programming and problem-solving skills. This experience provided me with valuable technical and interpersonal skills that continue to be relevant in my current career as a fullstack software engineer.`,
+        icon: 'tabler:briefcase',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="resume"
+    title="Education"
+    items={[
+      {
+        title: `Certified Full Stack Web Developer <br /> <span class="font-normal">Trybe</span> <br /> <span class="text-sm font-normal">2021 - 2022</span>`,
+        icon: 'tabler:school',
+      },
+      {
+        title: `Bachelor of Electric Engineering <br /> <span class="font-normal">Universidade Federal de Pernambuco</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>`,
+        icon: 'tabler:school',
+      },
+    ]}
+    classes={{ container: 'max-w-3xl' }}
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Skills"
+    subtitle="Discover the technical proficiencies that power my fullstack solutions."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'Frontend Development',
+        description: 'Expert in building responsive, high-performance UIs with Vue.js, React, Next.js, and Angular.',
+      },
+      {
+        title: 'Backend Development',
+        description: 'Skilled in scalable microservices and APIs using Node.js, Spring, Python (FastAPI), and Nest.js.',
+      },
+      {
+        title: 'AI & Innovation',
+        description:
+          'Experienced in integrating AI-driven features to enhance user engagement and operational efficiency.',
+      },
+      {
+        title: 'Cloud & DevOps',
+        description: 'Proficient in AWS, Docker, Kubernetes, and CI/CD pipelines for scalable cloud deployments.',
+      },
+      {
+        title: 'Databases',
+        description: 'Strong knowledge of PostgreSQL, MySQL, MongoDB, and Redis for optimized data management.',
+      },
+      {
+        title: 'Testing & Quality',
+        description: 'Advocate for robust systems with Jest, Cypress, and automated testing strategies.',
+      },
+      {
+        title: 'Languages & Tools',
+        description: 'Fluent in TypeScript, JavaScript, Java, Python; adept with Git, Agile/Scrum, and Linux.',
+      },
+      {
+        title: 'Adaptability',
+        description: 'Passionate about learning emerging tech (e.g., AI/ML) and solving complex problems.',
+      },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Let's Build the Future Together"
+    subtitle="Ready to collaborate on scalable web apps, AI solutions, or cutting-edge tech?"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Discuss Opportunities',
+        href: '/contact',
+      },
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explore the articles of my blog"
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+</Layout>

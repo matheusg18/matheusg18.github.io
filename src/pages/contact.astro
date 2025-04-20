@@ -1,0 +1,58 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contact" title="Let's Talk!" />
+
+  <ContactUs
+    id="form"
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Alternative contact methods"
+    items={[
+      {
+        title: 'Phone',
+        description: '+55 (81) 99351-3200',
+        icon: 'tabler:headset',
+      },
+      {
+        title: 'Whatsapp',
+        description: '+55 (81) 99351-3200',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: 'Email',
+        description: 'matheusgabriel.18@gmail.com',
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+</Layout>
