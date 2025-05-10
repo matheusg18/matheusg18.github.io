@@ -250,5 +250,3 @@ export interface Content extends Omit<Headline, 'classes'>, Widget {
   isAfterContent?: boolean;
   callToAction?: CallToAction;
 }
-
-export interface Contact extends Omit<Headline, 'classes'>, Form, Widget {}
