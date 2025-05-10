@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import ContactForm from '~/components/widgets/ContactForm.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import ContactMethods from '~/components/widgets/ContactMethods.astro';
 
 const metadata = {
   title: 'Contact',
@@ -32,24 +32,5 @@ const metadata = {
 
   <ContactForm />
 
-  <Features2
-    title="Alternative contact methods"
-    items={[
-      {
-        title: 'Phone',
-        description: '+55 (81) 99351-3200',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Whatsapp',
-        description: '+55 (81) 99351-3200',
-        icon: 'tabler:brand-whatsapp',
-      },
-      {
-        title: 'Email',
-        description: 'matheusgabriel.18@gmail.com',
-        icon: 'tabler:mail',
-      },
-    ]}
-  />
+  <ContactMethods />
 </Layout>

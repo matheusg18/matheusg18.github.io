@@ -1,0 +1,42 @@
+---
+import { Icon } from 'astro-icon/components';
+
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Headline from '~/components/ui/Headline.astro';
+
+const contactMethods = [
+  {
+    title: 'Phone',
+    description: '+55 (81) 99351-3200',
+    icon: 'tabler:headset',
+  },
+  {
+    title: 'Whatsapp',
+    description: '+55 (81) 99351-3200',
+    icon: 'tabler:brand-whatsapp',
+  },
+  {
+    title: 'Email',
+    description: 'matheusgabriel.18@gmail.com',
+    icon: 'tabler:mail',
+  },
+];
+---
+
+<WidgetWrapper containerClass="max-w-7xl mx-auto">
+  <Headline title="Alternative contact methods" />
+
+  <div class="grid gap-x-12 sm:gap-y-8 lg:grid-cols-3 sm:grid-cols-2 gap-4 md:gap-6">
+    {
+      contactMethods.map(({ title, description, icon }) => (
+        <div class="relative flex flex-col intersect-once intersect-quarter intercept-no-queue motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade rounded-lg shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm border border-[#ffffff29] bg-white dark:bg-slate-900 p-6">
+          <Icon name={icon} class="w-12 h-12 mb-6 text-primary" />
+
+          <div class="text-xl font-bold">{title}</div>
+
+          <p class="text-muted mt-2" set:html={description} />
+        </div>
+      ))
+    }
+  </div>
+</WidgetWrapper>
