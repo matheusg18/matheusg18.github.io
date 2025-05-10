@@ -7,7 +7,6 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import { getPermalink } from '~/utils/permalinks';
 import MeImage from '~/assets/images/me.jpg';
 
 const metadata = {
@@ -16,20 +15,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero2 Widget ******************* -->
-
-  <Hero
-    id="hero"
-    title="Matheus Santos"
-    tagline="Full Stack Web Developer"
-    actions={[{ variant: 'primary', text: "Let's talk", href: getPermalink('/contact#form') }]}
-  >
-    <Fragment slot="subtitle">
-      I'm a Full-Stack Engineer fueled by innovation. I build AI-powered solutions, scalable microservices, and
-      cloud-native apps with Vue.js, Next.js, Node.js, and Python—always pushing the boundaries of what tech can
-      achieve.
-    </Fragment>
-  </Hero>
+  <Hero />
 
   <!-- Content Widget **************** -->
 
