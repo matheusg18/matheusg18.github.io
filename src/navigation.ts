@@ -23,7 +23,5 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https:/github.com/matheusg18' },
     { ariaLabel: 'Linkedin', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/in/matheusg18' },
   ],
-  footNote: `
-    Made by me from <a class="text-blue-600 underline dark:text-muted" href="https://github.com/onwidget/astrowind"> Astrowind</a> · All rights reserved.
-  `,
+  footNote: 'All rights reserved.',
 };
