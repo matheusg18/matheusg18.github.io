@@ -84,8 +84,6 @@ In this code:
 
 ### Improving the logging
 
-You can improve the logging by setting the `verbose` parameter to `True` in the `graph_config`. This will provide detailed logs of each step in the scraping process, which is useful for debugging and understanding how the graph operates.
-
 ```python
 import os
 from dotenv import load_dotenv
